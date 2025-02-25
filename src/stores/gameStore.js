@@ -18,6 +18,7 @@ export const useGameStore = defineStore('gameStore', {
             O: 0
         },
         firstPlayer: 'X',
+        isSinglePlayer: true, // Aggiungiamo una proprietà per indicare se si gioca contro il computer
     }),
     actions: {
         makeMove(row, col) {
@@ -39,11 +40,36 @@ export const useGameStore = defineStore('gameStore', {
                 this.gameOver = true;
                 this.winningLine = winner;
                 this.score[this.currentPlayer]++;
+                this.totalGames++;
                 return;
             }
 
+            // Cambia giocatore
             this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
             this.message = `Tocca al giocatore ${this.currentPlayer}`;
+
+            // Se è il turno del computer e si gioca in modalità single player
+            if (this.isSinglePlayer && this.currentPlayer === 'O') {
+                this.computerMove();
+            }
+        },
+        computerMove() {
+            // Trova tutte le celle vuote
+            const emptyCells = [];
+            for (let row = 0; row < 3; row++) {
+                for (let col = 0; col < 3; col++) {
+                    if (this.grid[row][col] === null) {
+                        emptyCells.push({ row, col });
+                    }
+                }
+            }
+
+            // Scegli una cella casuale tra quelle vuote
+            if (emptyCells.length > 0) {
+                const randomIndex = Math.floor(Math.random() * emptyCells.length);
+                const { row, col } = emptyCells[randomIndex];
+                this.makeMove(row, col);
+            }
         },
         checkWinner() {
             const lines = [
