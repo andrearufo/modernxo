@@ -1,0 +1,10 @@
+{
+  "name": "Tris∞ — Tris infinito",
+  "short_name": "Tris∞",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0e1f",
+  "theme_color": "#0d0e1f",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
