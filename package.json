@@ -2,6 +2,8 @@
   "name": "modernxo",
   "version": "1.0.0",
   "private": true,
+  "license": "UNLICENSED",
+  "author": "Andrea Rufo",
   "type": "module",
   "scripts": {
     "dev": "vite --host",

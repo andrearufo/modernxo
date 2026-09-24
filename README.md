@@ -32,3 +32,9 @@ yarn dev      # sviluppo (esposto in LAN, apri dal telefono)
 yarn test     # test del motore
 yarn build    # build di produzione in dist/
 ```
+
+## Licenza
+
+© Andrea Rufo — tutti i diritti riservati. Puoi giocare alla [versione ufficiale](https://andrearufo.github.io/modernxo/),
+ma copiare, modificare, ridistribuire o ospitare il codice richiede un'autorizzazione scritta:
+[apri una issue](https://github.com/andrearufo/modernxo/issues) per chiederla. Dettagli in [LICENSE](LICENSE).
