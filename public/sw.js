@@ -1,7 +1,7 @@
 // Offline: all'installazione salva la pagina e gli asset che referenzia.
 // Pagina: prima la rete (così gli aggiornamenti arrivano subito), poi la cache.
 // Asset (hash nel nome, quindi immutabili) e font: prima la cache, poi la rete.
-const CACHE = 'trisinfinito-v1'
+const CACHE = 'trisinfinito-v2'
 // Radice dell'app (es. /modernxo/ su GitHub Pages): tutti i percorsi sono relativi a questa.
 const ROOT = self.registration.scope
 
