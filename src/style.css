@@ -179,6 +179,11 @@ button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .sheet.X .big { color: var(--x); }
 .sheet.O .big { color: var(--o); }
 
+/* ---------- GERENZA ---------- */
+.credits { text-align: center; font-size: 13px; color: var(--muted); padding-top: 16px; }
+.credits a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--line); padding: 8px 0; }
+.credits a:hover, .credits a:focus-visible { border-color: var(--gold); outline: none; }
+
 /* ---------- ANIMAZIONI ---------- */
 .pop-enter-active { transition: transform 0.25s cubic-bezier(0.3, 1.6, 0.5, 1); }
 .pop-enter-from { transform: scale(0.4); }

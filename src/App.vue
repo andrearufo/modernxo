@@ -83,6 +83,10 @@
                 </div>
             </Transition>
         </section>
+
+        <footer class="credits">
+            Un gioco di <a href="https://rufo.dev" target="_blank" rel="noopener">Andrea Rufo · rufo.dev</a>
+        </footer>
     </main>
 </template>
 
